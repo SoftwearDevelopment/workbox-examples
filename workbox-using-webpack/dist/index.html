@@ -9,5 +9,21 @@
 <body>
   <h1>Workbox using with webpack</h1>
   <div id="main"></div>
-<script type="text/javascript" src="index.93078.js"></script></body>
+    <script type="text/javascript" src="index.93078.js"></script></body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+    <script>
+      angular.module('example', [])
+      .run(function($http) {
+        console.log('start');
+
+        $http.get('main.93078.css').then(x => console.log('start', x));
+
+      });
+    </script>
+
+    <div ng-app="example">
+      open the dev console
+    </div>
+
 </html>
